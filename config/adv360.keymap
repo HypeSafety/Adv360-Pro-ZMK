@@ -28,6 +28,11 @@
             bindings = <&kp TAB>;
             key-positions = <32 31>;
         };
+
+        comboesc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <41 42>;
+        };
     };
 
     keymap {
@@ -36,11 +41,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5          &kp LC(C)                                                                        &kp LC(V)                    &kp N6           &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T           &kp GRAVE                                                                        &kp LEFT_BRACKET             &kp Y            &kp U   &kp I      &kp O    &kp P     &kp BSLH
-&kp F12    &kp A   &kp S   &kp D   &kp F   &kp G           &kp SLASH               &kp ESC      &mt RALT PSCRN      &kp HOME   &kp END      &kp RIGHT_BRACKET            &kp H            &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &hm LEFT_GUI B                                       &kp LC(A)           &kp PG_UP                                            &hm RIGHT_GUI N  &kp M   &kp COMMA  &kp DOT  &kp F11   &kp RSHFT
-&lt 3 F1   &kp F2  &kp F3  &kp F4  &kp F5                  &hm LEFT_CONTROL SPACE  &lt 1 ENTER  &kp DEL             &kp PG_DN  &lt 1 ENTER  &hm RIGHT_CONTROL BACKSPACE                   &kp F6  &kp F7     &kp F8   &kp F9    &lt 2 F10
+&kp EQUAL  &kp N1  &kp N2  &kp N3  &kp N4            &kp N5              &kp LC(C)                                                           &kp LC(V)          &kp N6               &kp N7             &kp N8     &kp N9   &kp N0     &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp E   &kp R             &hm LEFT_CONTROL T  &kp GRAVE                                                           &kp LEFT_BRACKET   &hm RIGHT_CONTROL Y  &kp U              &kp I      &kp O    &kp P      &kp BSLH
+&kp F12    &kp A   &kp S   &kp D   &kp F             &kp G               &kp SLASH  &kp ESC      &mt RALT PSCRN      &kp HOME   &kp END      &kp RIGHT_BRACKET  &kp H                &kp J              &kp K      &kp L    &kp SEMI   &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C   &hm LEFT_SHIFT V  &hm LEFT_GUI B                              &kp LC(A)           &kp PG_UP                                  &hm RIGHT_GUI N      &hm RIGHT_SHIFT M  &kp COMMA  &kp DOT  &kp SLASH  &kp RSHFT
+&lt 3 F1   &kp F2  &kp F3  &kp F4  &kp F5                                &kp SPACE  &lt 1 ENTER  &kp DEL             &kp PG_DN  &lt 1 ENTER  &kp BACKSPACE                           &kp F6             &kp F7     &kp F8   &kp F9     &lt 2 F10
             >;
         };
 
