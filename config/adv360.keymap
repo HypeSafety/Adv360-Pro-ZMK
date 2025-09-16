@@ -33,6 +33,11 @@
             bindings = <&kp ESCAPE>;
             key-positions = <41 42>;
         };
+
+        combokptoggle {
+            bindings = <&tog 1>;
+            key-positions = <66 69>;
+        };
     };
 
     keymap {
