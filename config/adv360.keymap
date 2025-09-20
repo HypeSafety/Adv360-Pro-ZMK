@@ -63,11 +63,11 @@
         keypad {
             display-name = "Kp";
             bindings = <
-&trans  &trans     &trans  &trans  &trans  &trans    &trans                                         &trans      &trans            &trans             &trans                &trans                 &trans      &trans
-&trans  &trans     &kp N7  &kp N8  &kp N9  &kp N0    &kp PLUS                                       &trans      &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans      &trans
-&trans  &kp CARET  &kp N4  &kp N5  &kp N6  &kp DOT   &kp MINUS  &trans  &trans      &trans  &trans  &trans      &kp LEFT          &kp DOWN           &kp UP                &kp RIGHT              &kp DOLLAR  &trans
-&trans  &trans     &kp N1  &kp N2  &kp N3  &kp BSPC                     &trans      &trans                      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LESS_THAN         &kp GREATER_THAN       &trans      &trans
-&trans  &trans     &trans  &trans  &trans            &trans     &trans  &trans      &trans  &trans  &kp DELETE                    &trans             &trans                &trans                 &trans      &trans
+&kp PLUS   &kp EXCLAMATION  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT  &trans                                         &trans      &kp CARET         &kp AMPERSAND      &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp UNDERSCORE
+&kp TILDE  &trans           &kp N7  &kp N8    &kp N9      &kp N0       &kp PLUS                                       &trans      &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans                 &kp PIPE
+&trans     &kp CARET        &kp N4  &kp N5    &kp N6      &kp DOT      &kp MINUS  &trans  &trans      &trans  &trans  &trans      &kp LEFT          &kp DOWN           &kp UP                &kp RIGHT              &kp COLON              &kp DOUBLE_QUOTES
+&trans     &trans           &kp N1  &kp N2    &kp N3      &kp BSPC                        &trans      &trans                      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION           &trans
+&trans     &trans           &trans  &trans    &trans                   &trans     &trans  &trans      &trans  &trans  &kp DELETE                    &trans             &trans                &trans                 &trans                 &trans
             >;
         };
 
