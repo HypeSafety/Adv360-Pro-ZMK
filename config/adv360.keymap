@@ -25,7 +25,7 @@
     combos {
         compatible = "zmk,combos";
 
-        combotab {
+        comboesc2 {
             bindings = <&kp ESCAPE>;
             key-positions = <32 31>;
         };
@@ -52,7 +52,7 @@
 
         end {
             bindings = <&kp END>;
-            key-positions = <43 44>;
+            key-positions = <43 42>;
         };
 
         del {
@@ -78,22 +78,22 @@
         keypad {
             display-name = "Kp";
             bindings = <
-&kp PLUS   &kp EXCLAMATION  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT  &trans                                         &trans  &kp CARET         &kp AMPERSAND      &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp UNDERSCORE
-&kp TILDE  &trans           &kp N7  &kp N8    &kp N9      &kp N0       &kp PLUS                                       &trans  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans                 &kp PIPE
-&trans     &kp CARET        &kp N4  &kp N5    &kp N6      &kp DOT      &kp MINUS  &trans  &trans      &trans  &trans  &trans  &kp LEFT          &kp DOWN           &kp UP                &kp RIGHT              &kp COLON              &kp DOUBLE_QUOTES
-&trans     &trans           &kp N1  &kp N2    &kp N3      &kp BSPC                        &trans      &trans                  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION           &trans
-&trans     &trans           &trans  &trans    &trans                   &trans     &trans  &trans      &trans  &trans  &trans                    &trans             &trans                &trans                 &trans                 &trans
+&kp PLUS   &kp EXCLAMATION  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT  &trans                                      &trans  &kp CARET         &kp AMPERSAND      &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp UNDERSCORE
+&kp TILDE  &kp F13          &kp N7  &kp N8    &kp N9      &kp N0       &trans                                      &trans  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans                 &kp PIPE
+&kp MINUS  &kp CARET        &kp N4  &kp N5    &kp N6      &kp DOT      &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT          &kp DOWN           &kp UP                &kp RIGHT              &kp COLON              &kp DOUBLE_QUOTES
+&trans     &kp F14          &kp N1  &kp N2    &kp N3      &kp BSPC                     &trans      &trans                  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION           &trans
+&trans     &trans           &trans  &trans    &trans                   &trans  &trans  &trans      &trans  &trans  &trans                    &trans             &trans                &trans                 &trans                 &trans
             >;
         };
 
         fn {
             display-name = "Fn";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                             &none         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp C_BRI_UP                                      &kp C_VOL_UP  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp C_BRI_DN  &trans  &trans      &trans  &trans  &kp C_VOL_DN  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                        &trans      &trans                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans        &trans  &trans      &trans  &trans  &trans                &trans  &trans  &trans  &trans  &trans
+&kp F12  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &none                                             &none         &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&trans   &trans  &trans  &trans  &trans  &trans  &kp C_BRI_UP                                      &kp C_VOL_UP  &trans  &trans  &trans  &trans  &trans   &trans
+&trans   &trans  &trans  &trans  &trans  &trans  &kp C_BRI_DN  &trans  &trans      &trans  &trans  &kp C_VOL_DN  &trans  &trans  &trans  &trans  &trans   &trans
+&trans   &trans  &trans  &trans  &trans  &trans                        &trans      &trans                        &trans  &trans  &trans  &trans  &trans   &trans
+&trans   &trans  &trans  &trans  &trans          &trans        &trans  &trans      &trans  &trans  &trans                &trans  &trans  &trans  &trans   &trans
             >;
         };
 
