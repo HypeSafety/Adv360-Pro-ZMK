@@ -15,11 +15,39 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
             quick-tap-ms = <175>;
+        };
+
+        hmleft: hmleft {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMLEFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <275>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 36 46 47 48 49 50 51 52 60 61 62 63 64 65 66 67>;
+        };
+
+        hmright: hmright {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMRIGHT";
+            #binding-cells = <2>;
+            tapping-term-ms = <275>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 43 24 25 26 27 42 43 44 45 56 57 58 59 72 73 74 75 7 8 9 21 22 23 39 40 41 54 55 71 70 69 38 37 68 53>;
         };
     };
 
@@ -58,11 +86,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp F2      &kp N1            &kp N2  &kp N3  &kp N4                    &kp N5          &kp LC(Z)                                                         &kp LC(N)       &kp N6           &kp N7                     &kp N8     &kp N9   &kp N0                     &kp DEL
-&kp F1      &kp Q             &kp W   &kp E   &hm LEFT_CONTROL R        &hm LEFT_ALT T  &kp LC(C)                                                         &msc SCRL_UP    &hm RIGHT_ALT Y  &hm RIGHT_CONTROL U        &kp I      &kp O    &kp P                      &kp F13
-&kp ESCAPE  &hm LEFT_SHIFT A  &kp S   &kp D   &kp F                     &kp G           &kp LC(V)  &kp ESC    &mt RALT PSCRN      &kp HOME   &kp END      &msc SCRL_DOWN  &kp H            &kp J                      &kp K      &kp L    &hm RIGHT_SHIFT SEMICOLON  &kp ESCAPE
-&sk LSHFT   &kp Z             &kp X   &kp C   &hm LA(LC(LEFT_SHIFT)) V  &hm LEFT_GUI B                        &kp LC(A)           &kp PG_UP                               &hm RIGHT_GUI N  &hm RA(RC(RIGHT_SHIFT)) M  &kp COMMA  &kp DOT  &kp SLASH                  &sk RSHFT
-&lt 3 F3    &kp F4            &kp F5  &kp F6  &kp F7                                    &kp SPACE  &lt 1 TAB  &kp DEL             &kp PG_DN  &lt 1 ENTER  &kp BACKSPACE                    &kp F8                     &kp F9     &kp F10  &lt 2 F11                  &lt 3 F12
+&kp F2      &kp N1                 &kp N2  &kp N3  &kp N4                         &kp N5               &kp LC(Z)                                                         &kp LC(N)       &kp N6               &kp N7                         &kp N8     &kp N9   &kp N0                         &kp DEL
+&kp F1      &kp Q                  &kp W   &kp E   &hmright LEFT_CONTROL R        &hmright LEFT_ALT T  &kp LC(C)                                                         &msc SCRL_UP    &hmleft RIGHT_ALT Y  &hmleft RIGHT_CONTROL U        &kp I      &kp O    &kp P                          &kp F13
+&kp ESCAPE  &hmright LEFT_SHIFT A  &kp S   &kp D   &kp F                          &kp G                &kp LC(V)  &kp ESC    &mt RALT PSCRN      &kp HOME   &kp END      &msc SCRL_DOWN  &kp H                &kp J                          &kp K      &kp L    &hmleft RIGHT_SHIFT SEMICOLON  &kp ESCAPE
+&sk LSHFT   &kp Z                  &kp X   &kp C   &hmright LA(LC(LEFT_SHIFT)) V  &hmright LEFT_GUI B                        &kp LC(A)           &kp PG_UP                               &hmleft RIGHT_GUI N  &hmleft RA(RC(RIGHT_SHIFT)) M  &kp COMMA  &kp DOT  &kp SLASH                      &sk RSHFT
+&lt 3 F3    &kp F4                 &kp F5  &kp F6  &kp F7                                              &kp SPACE  &lt 1 TAB  &kp DEL             &kp PG_DN  &lt 1 ENTER  &kp BACKSPACE                        &kp F8                         &kp F9     &kp F10  &lt 2 F11                      &lt 3 F12
             >;
         };
 
