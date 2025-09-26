@@ -73,6 +73,29 @@
         };
     };
 
+    macros {
+        arrow: arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+            label = "ARROW";
+        };
+
+        fatarrow: fatarrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp EQUAL &kp GT>;
+            label = "FATARROW";
+        };
+
+        doublrcolon: doublrcolon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp COLON &kp COLON>;
+            label = "DOUBLRCOLON";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -90,11 +113,11 @@
         keypad {
             display-name = "Kp";
             bindings = <
-&trans  &kp EXCLAMATION      &kp AT         &kp HASH     &kp DOLLAR      &kp PERCENT        &trans                                      &trans  &kp CARET         &kp AMPERSAND      &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &trans
-&trans  &kp GRAVE            &kp BSLH       &kp PLUS     &kp MINUS       &kp SQT            &trans                                      &trans  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp F17                &trans
-&trans  &hm LEFT_SHIFT HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END         &kp DEL            &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT          &kp DOWN           &kp UP                &kp RIGHT              &hm RIGHT_SHIFT COLON  &trans
-&trans  &kp TILDE            &kp PIPE       &kp EQUAL    &kp UNDERSCORE  &kp DOUBLE_QUOTES                  &trans      &trans                  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION           &trans
-&trans  &trans               &trans         &trans       &trans                             &trans  &trans  &trans      &trans  &trans  &trans                    &trans             &trans                &trans                 &trans                 &trans
+&trans  &kp EXCLAMATION      &kp AT         &kp HASH     &kp DOLLAR      &kp PERCENT   &trans                                      &trans  &kp CARET         &kp AMPERSAND      &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &trans
+&trans  &arrow               &kp BSLH       &kp PLUS     &kp MINUS       &kp GRAVE     &trans                                      &trans  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp F17                &trans
+&trans  &hm LEFT_SHIFT HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END         &doublrcolon  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT          &kp DOWN           &kp UP                &kp RIGHT              &hm RIGHT_SHIFT COLON  &trans
+&trans  &fatarrow            &kp PIPE       &kp EQUAL    &kp UNDERSCORE  &kp TILDE                     &trans      &trans                  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION           &trans
+&trans  &trans               &trans         &trans       &trans                        &trans  &trans  &trans      &trans  &trans  &trans                    &trans             &trans                &trans                 &trans                 &trans
             >;
         };
 
